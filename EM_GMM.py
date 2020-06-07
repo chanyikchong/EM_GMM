@@ -38,7 +38,8 @@ class GMM_EM():
         for i in range(self.k):
             mu[i, :] = 1/self.N[i]*np.sum(self.r[:,i:i+1]*data, axis = 0) #update mu
             diff = data - mu[i, :]
-            sig[i, :, :] = 1/self.N[i]*np.matmul(diff.transpose(), self.r[:,i:i+1]*diff) #update sigma
+            s = 1/self.N[i]*np.matmul(diff.transpose(), self.r[:,i:i+1]*diff) #update sigma
+            sig[i, :, :] = 1/2*(s+s.transpose()) 
         self.mu = mu
         self.sig = sig
         self.pi = self.N/self.n
