@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri May 15 11:56:22 2020
-
-@author: 16425
-"""
-
-
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import multivariate_normal
@@ -16,6 +8,7 @@ class GMM_EM():
         self.pi = np.random.randn(k)
         self.pi /= np.sum(self.pi)
         self.li = []
+        
     def train(self, data, epoch, plot = True):
         self.n, self.feature = data.shape
         self.mu = np.random.randn(self.k, self.feature)
@@ -31,11 +24,11 @@ class GMM_EM():
                 self.plot_contour(data, figure, i)
         if plot:
             plt.show()
+            
     def e_step(self, data):
         r = self.likelihood(data)
         self.r = r/np.sum(r*self.pi, axis = 1, keepdims=True)
 
-        
     def m_step(self, data):
         mu = np.zeros((self.k, self.feature))
         sig = np.zeros((self.k, self.feature, self.feature))
@@ -81,6 +74,7 @@ class GMM_EM():
         plt.ylim(-5, 5)
         plt.title('Epoch'+str(epoch+1))
         plt.pause(0.001)
+        
 def main():
     data1 = np.random.normal(0, 0.5, (50,2))
     data2 = np.random.normal(3, 0.9, (50,2))
