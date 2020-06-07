@@ -9,6 +9,6 @@ You will need the following package to run the model
 
 ## Usage
 Import the model
-```
+```python
 from EM_GMM import GMM_EM
 ```
