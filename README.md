@@ -20,7 +20,7 @@ Train the model with your data and also the number of iteration. You can also pl
 ```python
 model.train(data, epoch, plot = True) # default is True
 ```
-!(https://github.com/chanyikchong/EM_GMM/blob/master/scatter.png)
+![Image of Scatter](https://github.com/chanyikchong/EM_GMM/blob/master/scatter.png)\\
 You can get the negative log likelihood (do not use the likelihood function).
 ```python
 model.li
