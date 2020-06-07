@@ -8,15 +8,21 @@ You will need the following package to run the model
 - matplotlib
 
 ## Usage
-Import the model
+Import the model.
 ```python
 from EM_GMM import GMM_EM
 ```
-Initialize the model and define the number of cluster
+Initialize the model and define the number of cluster.
 ```python
 model = GMM_EM(k)
 ```
-Train the model with your data and also the number of iteration. You can also plot the training performance by setting plot = True
+Train the model with your data and also the number of iteration. You can also plot the training performance by setting plot = True.
 ```python
 model.train(data, epoch, plot = True) # default is True
+```
+You can get the negative log likelihood (do not use the likelihood function).
+```python
+model.li
+#or get the final negative log likelihood
+model.li[-1]
 ```
