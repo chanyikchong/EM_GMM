@@ -32,3 +32,4 @@ You can also plot the negative log likelihood in all training steps
 ```python
 model.plot_li()
 ```
+<img src="https://github.com/chanyikchong/EM_GMM/blob/master/nll.png" width="300"><br/>
