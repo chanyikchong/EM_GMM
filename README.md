@@ -26,3 +26,7 @@ model.li
 #or get the final negative log likelihood
 model.li[-1]
 ```
+You can also plot the negative log likelihood in all training steps
+```python
+model.plot_li()
+```
