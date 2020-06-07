@@ -11,6 +11,9 @@ class GMM_EM():
         
     def train(self, data, epoch, plot = True):
         self.n, self.feature = data.shape
+        if self.feature != 2 and plot:
+            print('Plot function only suitable for 2d data')
+            plot = False
         self.mu = np.random.randn(self.k, self.feature)
         sig = np.eye(self.feature)
         sig = [np.array([sig])]*self.k
