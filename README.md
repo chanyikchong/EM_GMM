@@ -33,3 +33,9 @@ You can also plot the negative log likelihood in all training steps
 model.plot_li()
 ```
 <img src="https://github.com/chanyikchong/EM_GMM/blob/master/nll.png" width="300"><br/>
+
+## Issues
+Sometimes the model may stop by a sigular matrix problem. This may due to unluckly initialization (The means and weights are randomly initialized) or unfitted number of cluster.
+
+## Contribution
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
