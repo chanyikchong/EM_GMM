@@ -2,6 +2,6 @@
 EM GMM is an unsupervise learning algorithm by clustering data to different guassian model.
 
 # Package
-\item numpy
-\item scipy
-\item matplotlib
+- numpy
+- scipy
+- matplotlib
