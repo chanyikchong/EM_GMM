@@ -12,3 +12,11 @@ Import the model
 ```python
 from EM_GMM import GMM_EM
 ```
+Initialize the model and define the number of cluster
+```python
+model = GMM_EM(k)
+```
+Train the model with your data and also the number of iteration. You can also plot the training performance by setting plot = True
+```python
+model.train(data, epoch, plot = True) # default is True
+```
