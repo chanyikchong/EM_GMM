@@ -16,7 +16,7 @@ Initialize the model and define the number of cluster.
 ```python
 model = GMM_EM(k)
 ```
-Train the model with your data and also the number of iteration. You can also plot the training performance by setting plot = True.
+Train the model with your data and also the number of iteration. You can also plot the training performance by setting plot = True. (Only for 2d data)
 ```python
 model.train(data, epoch, plot = True) # default is True
 ```
