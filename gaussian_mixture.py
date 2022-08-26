@@ -111,9 +111,6 @@ class GaussianMixture:
             pro += self.pi[i] * stats.multivariate_normal.pdf(x, self.mu[i], sig)
         return pro
 
-    def update_param(self, x):
-        pass
-
 
 if __name__ == '__main__':
     n_component = 4
